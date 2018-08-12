@@ -9,29 +9,29 @@
 
 // compile
 var compileConfig = Argument("configuration", "Release");
-var slnFile = "./Ocelot.Package.Archetype.sln";
+var slnFile = "./Ocelot.Provider.Eureka.sln";
 
 // build artifacts
 var artifactsDir = Directory("artifacts");
 
 // unit testing
 var artifactsForUnitTestsDir = artifactsDir + Directory("UnitTests");
-var unitTestAssemblies = @"./test/Ocelot.Package.Archetype.UnitTests/Ocelot.Package.Archetype.UnitTests.csproj";
+var unitTestAssemblies = @"./test/Ocelot.Provider.Eureka.UnitTests/Ocelot.Provider.Eureka.UnitTests.csproj";
 var minCodeCoverage = 0d;
 var coverallsRepoToken = "coveralls-repo-token-ocelot";
-var coverallsRepo = "https://coveralls.io/github/ThreeMammals/Ocelot.Package.Archetype";
+var coverallsRepo = "https://coveralls.io/github/ThreeMammals/Ocelot.Provider.Eureka";
 
 // acceptance testing
 var artifactsForAcceptanceTestsDir = artifactsDir + Directory("AcceptanceTests");
-var acceptanceTestAssemblies = @"./test/Ocelot.Package.Archetype.AcceptanceTests/Ocelot.Package.Archetype.AcceptanceTests.csproj";
+var acceptanceTestAssemblies = @"./test/Ocelot.Provider.Eureka.AcceptanceTests/Ocelot.Provider.Eureka.AcceptanceTests.csproj";
 
 // integration testing
 var artifactsForIntegrationTestsDir = artifactsDir + Directory("IntegrationTests");
-var integrationTestAssemblies = @"./test/Ocelot.Package.Archetype.IntegrationTests/Ocelot.Package.Archetype.IntegrationTests.csproj";
+var integrationTestAssemblies = @"./test/Ocelot.Provider.Eureka.IntegrationTests/Ocelot.Provider.Eureka.IntegrationTests.csproj";
 
 // benchmark testing
 var artifactsForBenchmarkTestsDir = artifactsDir + Directory("BenchmarkTests");
-var benchmarkTestAssemblies = @"./test/Ocelot.Package.Archetype.Benchmarks";
+var benchmarkTestAssemblies = @"./test/Ocelot.Provider.Eureka.Benchmarks";
 
 // packaging
 var packagesDir = artifactsDir + Directory("Packages");
@@ -44,7 +44,7 @@ var nugetFeedUnstableUploadUrl = "https://www.nuget.org/api/v2/package";
 var nugetFeedUnstableSymbolsUploadUrl = "https://www.nuget.org/api/v2/package";
 
 // stable releases
-var tagsUrl = "https://api.github.com/repos/threemammals/ocelot.Package.Archetype/releases/tags/";
+var tagsUrl = "https://api.github.com/repos/threemammals/ocelot.Provider.Eureka/releases/tags/";
 var nugetFeedStableKey = EnvironmentVariable("nuget-apikey-stable");
 var nugetFeedStableUploadUrl = "https://www.nuget.org/api/v2/package";
 var nugetFeedStableSymbolsUploadUrl = "https://www.nuget.org/api/v2/package";
@@ -135,9 +135,9 @@ Task("RunUnitTests")
 					Register="user",
 					ArgumentCustomization=args=>args.Append(@"-oldstyle -returntargetcode -excludebyattribute:*.ExcludeFromCoverage*")
 				}
-				.WithFilter("+[Ocelot.Package.Archetype*]*")
+				.WithFilter("+[Ocelot.Provider.Eureka*]*")
 				.WithFilter("-[xunit*]*")
-				.WithFilter("-[Ocelot.Package.Archetype*Tests]*")
+				.WithFilter("-[Ocelot.Provider.Eureka*Tests]*")
 			);
         
 			ReportGenerator(coverageSummaryFile, artifactsForUnitTestsDir);
@@ -263,12 +263,12 @@ Task("CreatePackages")
 	.Does(() => 
 	{
 		EnsureDirectoryExists(packagesDir);
-		CopyFiles("./src/**/Ocelot.Package.Archetype.*.nupkg", packagesDir);
+		CopyFiles("./src/**/Ocelot.Provider.Eureka.*.nupkg", packagesDir);
 
 		//GenerateReleaseNotes(releaseNotesFile);
 
         System.IO.File.WriteAllLines(artifactsFile, new[]{
-            "nuget:Ocelot.Package.Archetype." + buildVersion + ".nupkg",
+            "nuget:Ocelot.Provider.Eureka." + buildVersion + ".nupkg",
             //"releaseNotes:releasenotes.md"
         });
 

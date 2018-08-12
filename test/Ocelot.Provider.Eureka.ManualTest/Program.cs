@@ -1,4 +1,4 @@
-﻿namespace Ocelot.Package.Archetype.ManualTest
+﻿namespace Ocelot.Provider.Eureka.ManualTest
 {
     using System.IO;
     using DependencyInjection;
@@ -25,7 +25,7 @@
                 })
                 .ConfigureServices(s => {
                     s.AddOcelot()
-                        .AddSomething();
+                        .AddEureka();
                 })
                 .ConfigureLogging((hostingContext, logging) =>
                 {

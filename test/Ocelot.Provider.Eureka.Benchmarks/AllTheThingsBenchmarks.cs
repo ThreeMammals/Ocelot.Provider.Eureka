@@ -1,4 +1,4 @@
-namespace Ocelot.Package.Archetype.Benchmarks
+namespace Ocelot.Provider.Eureka.Benchmarks
 {
     using System;
     using System.Collections.Generic;

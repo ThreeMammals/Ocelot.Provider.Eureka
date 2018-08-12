@@ -1,4 +1,4 @@
-﻿namespace Ocelot.Package.Archetype.Benchmarks
+﻿namespace Ocelot.Provider.Eureka.Benchmarks
 {
     using BenchmarkDotNet.Running;
 

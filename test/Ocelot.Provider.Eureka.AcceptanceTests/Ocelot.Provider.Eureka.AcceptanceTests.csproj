@@ -2,9 +2,9 @@
   <PropertyGroup>
     <VersionPrefix>0.0.0-dev</VersionPrefix>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <AssemblyName>Ocelot.Package.Archetype.AcceptanceTests</AssemblyName>
+    <AssemblyName>Ocelot.Provider.Eureka.AcceptanceTests</AssemblyName>
     <OutputType>Exe</OutputType>
-    <PackageId>Ocelot.Package.Archetype.AcceptanceTests</PackageId>
+    <PackageId>Ocelot.Provider.Eureka.AcceptanceTests</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <RuntimeIdentifiers>osx.10.11-x64;osx.10.12-x64;win7-x64;win10-x64</RuntimeIdentifiers>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
@@ -33,7 +33,7 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="2.1.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.2" />
-    <PackageReference Include="Ocelot" Version="8.0.8" />
+    <PackageReference Include="Ocelot" Version="9.0.0" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.0.2">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
@@ -54,6 +54,6 @@
     <PackageReference Include="Rafty" Version="0.4.4" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Ocelot.Package.Archetype\Ocelot.Package.Archetype.csproj" />
+    <ProjectReference Include="..\..\src\Ocelot.Provider.Eureka\Ocelot.Provider.Eureka.csproj" />
   </ItemGroup>
 </Project>

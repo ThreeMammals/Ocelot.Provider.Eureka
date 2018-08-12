@@ -2,9 +2,9 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/8ry4ailt7rr5mbu7?svg=true)](https://ci.appveyor.com/project/TomPallister/ocelot-cache-cachemanager)
 Windows (AppVeyor)
-[![Build Status](https://travis-ci.org/ThreeMammals/Ocelot.Package.Archetype.svg?branch=master)](https://travis-ci.org/ThreeMammals/Ocelot.Package.Archetype) Linux & OSX (Travis)
+[![Build Status](https://travis-ci.org/ThreeMammals/Ocelot.Provider.Eureka.svg?branch=master)](https://travis-ci.org/ThreeMammals/Ocelot.Provider.Eureka) Linux & OSX (Travis)
 
-[![Coverage Status](https://coveralls.io/repos/github/ThreeMammals/Ocelot.Package.Archetype/badge.svg?branch=develop)](https://coveralls.io/github/ThreeMammals/Ocelot.Package.Archetype?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/ThreeMammals/Ocelot.Provider.Eureka/badge.svg?branch=develop)](https://coveralls.io/github/ThreeMammals/Ocelot.Provider.Eureka?branch=develop)
 
 # Ocelot
 
@@ -16,13 +16,13 @@ Ocelot is designed to work with ASP.NET Core only and it targets `netstandard2.0
 
 Install Ocelot and it's dependencies using NuGet. 
 
-`Install-Package Ocelot.Package.Archetype`
+`Install-Package Ocelot.Provider.Eureka`
 
 Or via the .NET Core CLI:
 
-`dotnet add package Ocelot.Package.Archetype`
+`dotnet add package Ocelot.Provider.Eureka`
 
-All versions can be found [here](https://www.nuget.org/packages/Ocelot.Package.Archetype/)
+All versions can be found [here](https://www.nuget.org/packages/Ocelot.Provider.Eureka/)
 
 ## Documentation
 
