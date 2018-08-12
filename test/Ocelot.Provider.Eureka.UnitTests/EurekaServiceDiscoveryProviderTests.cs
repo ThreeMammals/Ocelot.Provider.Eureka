@@ -4,7 +4,6 @@
     using System.Collections.Generic;
     using System.Threading.Tasks;
     using Moq;
-    using ServiceDiscovery.Providers;
     using Shouldly;
     using Steeltoe.Common.Discovery;
     using TestStack.BDDfy;

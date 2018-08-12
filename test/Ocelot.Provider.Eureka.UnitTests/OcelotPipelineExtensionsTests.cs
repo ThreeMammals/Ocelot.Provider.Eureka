@@ -1,20 +1,15 @@
 ﻿namespace Ocelot.Provider.Eureka.UnitTests
 {
     using DependencyInjection;
-    using DownstreamRouteFinder.Middleware;
-    using DownstreamUrlCreator.Middleware;
-    using LoadBalancer.Middleware;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Middleware;
     using Middleware.Pipeline;
     using Pivotal.Discovery.Client;
-    using Request.Middleware;
     using Shouldly;
     using Steeltoe.Common.Discovery;
     using Steeltoe.Discovery.Eureka;
     using TestStack.BDDfy;
-    using WebSockets.Middleware;
     using Xunit;
 
     public class OcelotPipelineExtensionsTests
@@ -38,22 +33,6 @@
 
         private void WhenIBuild()
         {
-            _handlers = _builder.BuildOcelotPipeline(new OcelotPipelineConfiguration());
-        }
-
-        private void WhenIExpandBuild()
-        {
-            OcelotPipelineConfiguration configuration = new OcelotPipelineConfiguration();
-            configuration.MapWhenOcelotPipeline.Add((app) =>
-            {
-                app.UseDownstreamRouteFinderMiddleware();
-                app.UseDownstreamRequestInitialiser();
-                app.UseLoadBalancingMiddleware();
-                app.UseDownstreamUrlCreatorMiddleware();
-                app.UseWebSocketsProxyMiddleware();
-
-                return context => context.HttpContext.WebSockets.IsWebSocketRequest;
-            });
             _handlers = _builder.BuildOcelotPipeline(new OcelotPipelineConfiguration());
         }
 
