@@ -1,10 +1,9 @@
 [<img src="http://threemammals.com/images/ocelot_logo.png">](http://threemammals.com/ocelot)
 
-[![Build status](https://ci.appveyor.com/api/projects/status/8ry4ailt7rr5mbu7?svg=true)](https://ci.appveyor.com/project/TomPallister/ocelot-cache-cachemanager)
-Windows (AppVeyor)
-[![Build Status](https://travis-ci.org/ThreeMammals/Ocelot.Provider.Eureka.svg?branch=master)](https://travis-ci.org/ThreeMammals/Ocelot.Provider.Eureka) Linux & OSX (Travis)
+[![Build status](https://ci.appveyor.com/api/projects/status/ab41so5nqc3g1ox9?svg=true)](https://ci.appveyor.com/project/TomPallister/ocelot-provider-eureka) Windows (AppVeyor)
+[![Build Status](https://travis-ci.org/ThreeMammals/Ocelot.Provider.Eureka.svg?branch=develop)](https://travis-ci.org/ThreeMammals/Ocelot.Provider.Eureka) Linux & OSX (Travis)
 
-[![Coverage Status](https://coveralls.io/repos/github/ThreeMammals/Ocelot.Provider.Eureka/badge.svg?branch=develop)](https://coveralls.io/github/ThreeMammals/Ocelot.Provider.Eureka?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/ThreeMammals/Ocelot.Provider.Eureka/badge.svg)](https://coveralls.io/github/ThreeMammals/Ocelot.Provider.Eureka)
 
 # Ocelot
 
