@@ -7,7 +7,7 @@
 
 # Ocelot
 
-This package adds [Consul](https://www.consul.io/) support to Ocelot via the package [Consul](https://github.com/PlayFab/consuldotnet).
+This package adds [Eureka](https://github.com/Netflix/eureka) support to Ocelot via the [Steeltoe](https://steeltoe.io/) project.
 
 ## How to install
 
