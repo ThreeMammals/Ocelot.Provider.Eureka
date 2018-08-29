@@ -12,7 +12,7 @@
 
     public class EurekaServiceDiscoveryProviderTests
     {
-        private readonly EurekaServiceDiscoveryProvider _provider;
+        private readonly Eureka _provider;
         private readonly Mock<IDiscoveryClient> _client;
         private readonly string _serviceId;
         private List<IServiceInstance> _instances;
@@ -22,7 +22,7 @@
         {
             _serviceId = "Laura";
             _client = new Mock<IDiscoveryClient>();
-            _provider = new EurekaServiceDiscoveryProvider(_serviceId, _client.Object);
+            _provider = new Eureka(_serviceId, _client.Object);
         }
 
         [Fact]

@@ -7,12 +7,12 @@
     using Steeltoe.Common.Discovery;
     using Values;
 
-    public class EurekaServiceDiscoveryProvider : IServiceDiscoveryProvider
+    public class Eureka : IServiceDiscoveryProvider
     {
         private readonly IDiscoveryClient _client;
         private readonly string _serviceName;
 
-        public EurekaServiceDiscoveryProvider(string serviceName, IDiscoveryClient client)
+        public Eureka(string serviceName, IDiscoveryClient client)
         {
             _client = client;
             _serviceName = serviceName;

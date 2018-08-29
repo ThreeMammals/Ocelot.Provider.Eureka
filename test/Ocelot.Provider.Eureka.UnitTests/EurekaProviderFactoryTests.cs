@@ -27,7 +27,7 @@
             services.AddSingleton<IDiscoveryClient>(client.Object);
             var sp = services.BuildServiceProvider();
             var provider = EurekaProviderFactory.Get(sp, config, null);
-            provider.ShouldBeOfType<EurekaServiceDiscoveryProvider>();
+            provider.ShouldBeOfType<Eureka>();
         }
     }
 }
