@@ -13,7 +13,7 @@
 
             if (config.Type?.ToLower() == "eureka" && client != null)
             {
-                return new EurekaServiceDiscoveryProvider(name, client);
+                return new Eureka(name, client);
             }
 
             return null;
