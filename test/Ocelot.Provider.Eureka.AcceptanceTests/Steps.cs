@@ -1,34 +1,17 @@
 ﻿namespace Ocelot.Provider.Eureka.AcceptanceTests
 {
     using System;
-    using System.Collections.Generic;
     using System.IO;
-    using System.IO.Compression;
-    using System.Linq;
     using System.Net;
     using System.Net.Http;
-    using System.Net.Http.Headers;
-    using System.Text;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Configuration.Creator;
     using Configuration.File;
-    using Configuration.Repository;
     using DependencyInjection;
-    using IdentityServer4.AccessTokenValidation;
-    using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.TestHost;
     using Microsoft.Extensions.Configuration;
-    using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.Extensions.Logging;
     using Middleware;
-    using Middleware.Multiplexer;
     using Newtonsoft.Json;
     using Shouldly;
-    using ConfigurationBuilder = Microsoft.Extensions.Configuration.ConfigurationBuilder;
-    using CookieHeaderValue = System.Net.Http.Headers.CookieHeaderValue;
-    using MediaTypeHeaderValue = System.Net.Http.Headers.MediaTypeHeaderValue;
 
     public class Steps : IDisposable
     {
