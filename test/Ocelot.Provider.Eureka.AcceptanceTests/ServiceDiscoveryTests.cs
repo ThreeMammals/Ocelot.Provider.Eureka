@@ -47,7 +47,6 @@
                             UpstreamHttpMethod = new List<string> { "Get" },
                             ServiceName = serviceName,
                             LoadBalancerOptions = new FileLoadBalancerOptions { Type = "LeastConnection" },
-                            UseServiceDiscovery = true,
                         }
                     },
                 GlobalConfiguration = new FileGlobalConfiguration()
@@ -143,7 +142,9 @@
                         }
                     };
 
-                    await context.Response.WriteJsonAsync(applications);
+                    var json = JsonConvert.SerializeObject(applications);
+                    context.Response.Headers.Add("Content-Type", "application/json");
+                    await context.Response.WriteAsync(json);
                 }
             });
         }
